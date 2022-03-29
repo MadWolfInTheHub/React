@@ -27,7 +27,7 @@ const greetingElem = React.createElement(
     React.createElement(
       'h1',
       {className: 'greeting__title'},
-      'Hello,React!'
+      'Hello, world!'
     ),
     React.createElement(
       'p',
