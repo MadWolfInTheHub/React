@@ -6,7 +6,7 @@ import './search.scss';
 
 const rootElem = document.querySelector('#root');
 
-const Search = (props) => {
+export const Search = (props) => {
   console.log(props)
   return (
     <div className="search">
@@ -21,3 +21,4 @@ const Search = (props) => {
 
 
 ReactDOM.render(<Search name="Bob"/>, rootElem);
+

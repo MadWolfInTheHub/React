@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = (env, argv) => {
     const isProduction = argv.mode === "production";
     const config = {
-        entry: "./src/index.jsx",
+        entry: "./src/Search.jsx",
         output: {
             filename: "bundle.js",
             path: path.resolve(__dirname, 'review_build'),
