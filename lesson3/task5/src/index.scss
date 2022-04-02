@@ -1,0 +1,16 @@
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile {
+  background-color: floralwhite;
+  border: 1px solid burlywood;
+  margin: auto;
+
+  &__name {
+    text-align: center;
+    font-weight: 700;
+  }
+}
