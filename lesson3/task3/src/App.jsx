@@ -1,10 +1,6 @@
-import React from "react"
+/* import React from "react"
 import Comment from "./Comment"
 
-const userInfo = {
-  name: 'Tom',
-  avatarUrl: 'https://avatars1.githubusercontent.com'
-}
 
 const App = () => {
   return (
@@ -16,4 +12,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App; */
