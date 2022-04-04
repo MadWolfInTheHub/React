@@ -6,7 +6,7 @@ class Toggler extends Component {
 
     this.state = {
       counter: 0,
-      toggler: 'off',
+      toggler: 'Off',
     }
 
   }
@@ -16,7 +16,7 @@ class Toggler extends Component {
       counter: this.state.counter + 1,
     })
     console.log(this.state.counter)
-    this.state.counter % 2 === 0 ? this.state.toggler = 'on' : this.state.toggler = 'off'
+    this.state.counter % 2 === 0 ? this.state.toggler = 'On' : this.state.toggler = 'Off'
   }
 
   render() {
