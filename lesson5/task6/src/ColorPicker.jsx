@@ -6,19 +6,28 @@ const AQUA = 'Aqua'
 const BISQUE = 'Bisque'
 
 class ColorPicker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      color: '',
+    }
+  }
   setColorName = text => {
-    const color = document.querySelector('.picker__title');
-    color.textContent = text;
+    this.setState({
+      color: text
+    })
   }
   cleanTitle = () => {
-    const color = document.querySelector('.picker__title');
-    color.textContent = '';
+    this.setState({
+      color: ''
+    })
   }
 
   render() {
     return (
       <div>
-        <div className="picker__title"></div>
+        <div className="picker__title">{this.state.color}</div>
         <div>
           <button className="picker__button picker__button_coral"
           onMouseEnter={() => this.setColorName(COLAR)}
