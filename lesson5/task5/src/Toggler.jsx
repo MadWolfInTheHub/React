@@ -5,17 +5,23 @@ class Toggler extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
+      counter: false,
       toggler: 'Off',
     }
 
   }
 
   switcher = () => {
+    this.state.counter === false
+    ? 
     this.setState({
-      counter: this.state.counter + 1,
+      counter: true
     })
-    this.state.counter % 2 === 0 ? this.state.toggler = 'On' : this.state.toggler = 'Off'
+    :
+    this.setState({
+      counter: false
+    })
+    this.state.counter === true ? this.state.toggler = 'On' : this.state.toggler = 'Off'
   }
 
   render() {
