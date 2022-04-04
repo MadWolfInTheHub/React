@@ -10,6 +10,10 @@ class ColorPicker extends Component {
     const color = document.querySelector('.picker__title');
     color.textContent = text;
   }
+  cleanTitle = () => {
+    const color = document.querySelector('.picker__title');
+    color.textContent = '';
+  }
 
   render() {
     return (
@@ -17,11 +21,17 @@ class ColorPicker extends Component {
         <div className="picker__title"></div>
         <div>
           <button className="picker__button picker__button_coral"
-          onMouseEnter={() => this.setColorName(COLAR)}></button>
+          onMouseEnter={() => this.setColorName(COLAR)}
+          onMouseLeave={() => this.cleanTitle()}
+          ></button>
           <button className="picker__button picker__button_aqua"
-          onMouseEnter={() => this.setColorName(AQUA)}></button>
+          onMouseEnter={() => this.setColorName(AQUA)}
+          onMouseLeave={() => this.cleanTitle()}
+          ></button>
           <button className="picker__button picker__button_bisque"
-          onMouseEnter={() => this.setColorName(BISQUE)}></button>
+          onMouseEnter={() => this.setColorName(BISQUE)}
+          onMouseLeave={() => this.cleanTitle()}
+          ></button>
         </div>
       </div>
     )
