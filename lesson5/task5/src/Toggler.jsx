@@ -15,7 +15,6 @@ class Toggler extends Component {
     this.setState({
       counter: this.state.counter + 1,
     })
-    console.log(this.state.counter)
     this.state.counter % 2 === 0 ? this.state.toggler = 'On' : this.state.toggler = 'Off'
   }
 
