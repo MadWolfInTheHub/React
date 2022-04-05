@@ -7,13 +7,14 @@ class Status extends Component {
     super(props)
 
     this.state = {
-      isOline: true
+      isOline: true,
+      isOffline: false
     }
   }
   render() {
     return (
     <div className="status">
-      {this.state.isOline === true ? ( 
+      {this.state.isOline === true && this.state.isOffline === false ? ( 
       <Online/> 
       ) : (
       <Offline/>
