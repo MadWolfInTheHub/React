@@ -27,7 +27,7 @@ class Auth extends Component {
     if(this.state.isLoggedIn) {
       button = <button className='btn logout'  onClick={this.handleLogout}>Logout</button>
     } else {
-      button = <button className='btn logout' onClick={this.handleLogin}>Login</button>
+      button = <button className='btn login' onClick={this.handleLogin}>Login</button>
     }
     return (
       <div className='panel'>
