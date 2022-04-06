@@ -1,3 +1,10 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import UsersList from './UsersList'
+import './index.scss'
+
+const rootElem = document.querySelector('#root')
+
 const users = [
   {
     id: 'id-0',
@@ -20,3 +27,5 @@ const users = [
     name: 'Sam',
   },
 ];
+
+ReactDOM.render(<UsersList users={users}/>, rootElem);
