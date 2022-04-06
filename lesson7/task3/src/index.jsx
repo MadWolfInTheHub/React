@@ -1,3 +1,10 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import TransactionsList from "./TransactionsList";
+import './index.scss';
+
+const rootElem = document.querySelector('#root');
+
 const transactions = [
   {
     id: 'id-0',
@@ -24,3 +31,5 @@ const transactions = [
     time: '2019-01-10T17:01:35.447Z',
   },
 ];
+
+ReactDOM.render(<TransactionsList transactions={transactions}/>, rootElem);
