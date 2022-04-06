@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 class Life extends Component {
   constructor() {
     super();
-    console.log('constructor: good place to create');
+    console.log('constructor: good place to create state');
   };
   
   componentDidMount() {
-    console.log('componentDidMount: Api calls, subscription');
+    console.log('componentDidMount: API calls, subscriptions');
   };
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render)');
+    console.log('sshouldComponentUpdate(nextProps, nextState): decide to render or not to render)');
     return nextProps.number % 2;
   };
   
@@ -20,11 +20,11 @@ class Life extends Component {
   };
 
   componentWillUnmount() {
-    console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
+    console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   };
 
   render() {
-    console.log('return React element to build DOM')
+    console.log('return React element to build')
     return <div className='number'>{this.props.number}</div>
   };
 };
