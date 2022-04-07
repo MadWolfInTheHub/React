@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Search extends Component {
   state ={
-    value: 'good restaurant'
+    value: ''
   };
 
   handleChange = (e) => {
@@ -19,9 +19,9 @@ class Search extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.search} className="search">
+      <form className="search">
         <input onChange={this.handleChange} value={this.state.value} type="text" className="search__input" />
-        <button className="search__button" type='submit'>Search</button>
+        <button onClick={this.search} className="search__button" type='submit'>Search</button>
       </form>
     );
   };
