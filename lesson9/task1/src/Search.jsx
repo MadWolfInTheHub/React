@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Search extends Component {
   state ={
-    value: ''
+    value: 'good restaurant'
   };
 
   handleChange = (event) => {
@@ -14,9 +14,10 @@ class Search extends Component {
   };
 
   search = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     alert(`Search text: ${this.state.value}`)
-  }
+  };
+  
   render() {
     return (
       <form onSubmit={this.search} className="search">
