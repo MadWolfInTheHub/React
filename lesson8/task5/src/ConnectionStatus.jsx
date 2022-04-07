@@ -7,6 +7,7 @@ class ConnectionStatus extends Component {
     this.state = {
       connection: 'online',
     };
+    this.handleConnectionChange = this.handleConnectionChange.bind(this)
   }
 
   componentDidMount() {
