@@ -5,11 +5,11 @@ class Search extends Component {
     value: ''
   };
 
-  handleChange = (e) => {
-    e.persist();
-    console.log(e.target.value)
+  handleChange = (event) => {
+    event.persist();
+    console.log(event.target.value)
     this.setState({
-      value: e.target.value
+      value: event.target.value
     });
   };
 
@@ -19,9 +19,9 @@ class Search extends Component {
   }
   render() {
     return (
-      <form className="search">
+      <form onSubmit={this.search} className="search">
         <input onChange={this.handleChange} value={this.state.value} type="text" className="search__input" />
-        <button onClick={this.search} className="search__button" type='submit'>Search</button>
+        <button className="search__button" type='submit'>Search</button>
       </form>
     );
   };
