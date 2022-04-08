@@ -36,8 +36,9 @@ class UserForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state)
+    this.onSubmit()
   }
+  onSubmit = () => console.log(this.state)
 
   render() {
     return (
