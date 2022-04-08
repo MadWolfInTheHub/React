@@ -3,18 +3,21 @@ import React, { Component } from 'react';
 class UserForm extends Component {
   constructor(props) {
     super(props);
-    console.log(props)
+    console.log(props.createUser.student)
     this.state = {
       name: props.createUser.name,
       student: props.createUser.student,
       occupation: props.createUser.occupation,
-      about: props.createUser.about,
-  
+      about: props.createUser.about
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   };
 
   handleChange = event => {
     const { name, value, checked, type } = event.target;
+    console.log(event.target)
 
     const val = type === 'checkbox'
     ? checked
@@ -47,7 +50,7 @@ class UserForm extends Component {
         <div className="form-control">
           <label className="form-label" htmlFor="student">Student</label>
           <input className="form-input" 
-          value={this.state.student}
+          checked={this.state.student}
           type="checkbox"
           id="student"
           name="student"
@@ -56,13 +59,13 @@ class UserForm extends Component {
         </div>
         <div className="form-control">
           <label className="form-label"
-          value={this.state.occupation}
           id="occupation"
           htmlFor="occupation"
           >Occupation</label>
           <select name="occupation" 
           className="form-input"
-          onChange={this.handleChange}>
+          onChange={this.handleChange}
+          value={this.state.occupation}>
             <option value="london">London</option>
             <option value="new-york">New York</option>
             <option value="coconut">Sidney</option>
