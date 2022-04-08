@@ -27,7 +27,7 @@ class UserForm extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    console.log(this.props.onSubmit(this.state))
+    console.log(this.props.onSubmit(this.state));
   }
 
   render() {
