@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 class UserForm extends Component {
 /*   constructor(props) {
     super(props);
+    console.log(props.createUser)
+  } */
+/*   constructor(props) {
+    super(props);
     console.log(props.createUser.student)
     this.state = {
       name: props.createUser.name,
@@ -34,15 +38,14 @@ class UserForm extends Component {
     });
   };
 
-  handleSubmit = event => {
+  onSubmit = event => {
     event.preventDefault();
-    this.onSubmit()
+    console.log(this.state)
   }
-  onSubmit = () => console.log(this.state)
 
   render() {
     return (
-      <form className="login-form" onSubmit={this.handleSubmit}>
+      <form className="login-form" onSubmit={this.onSubmit}>
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">Name</label>
