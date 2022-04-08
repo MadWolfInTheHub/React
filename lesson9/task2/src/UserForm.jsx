@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-  constructor(props) {
+/*   constructor(props) {
     super(props);
     console.log(props.createUser.student)
     this.state = {
@@ -13,11 +13,17 @@ class UserForm extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }; */
+
+  state = {
+    name: '',
+    student: '',
+    occupation: '',
+    about: '',
   };
 
   handleChange = event => {
     const { name, value, checked, type } = event.target;
-    console.log(event.target)
 
     const val = type === 'checkbox'
     ? checked
