@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 class UserForm extends Component {
   constructor(props) {
     super(props);
-    console.log(props.onSubmit);
   };
 
   handleSubmit = event => {
@@ -11,7 +10,7 @@ class UserForm extends Component {
     const formData = [...new FormData(this.formRef)]
     .reduce((acc, [name,value]) => ({ ...acc, [name]: value}))
     {}
-    console.log(this.props.onSubmit(formData))
+    this.props.onSubmit(formData);
   };
 
   setRef = node => {
