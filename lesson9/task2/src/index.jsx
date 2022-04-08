@@ -5,11 +5,11 @@ import App from "./App";
 
 const rootElem = document.querySelector('#root');
 
-const user = {
+/* const user = {
   name: 'Serhii',
   student: true,
   occupation: 'coconut',
   about: 'I\'m learning React',
-}
+} */
 
-ReactDOM.render(<App createUser={user}/>, rootElem);
+ReactDOM.render(<App /* createUser={user} *//>, rootElem);
