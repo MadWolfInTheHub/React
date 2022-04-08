@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-/*   constructor(props) {
+  constructor(props) {
     super(props);
-    console.log(props.createUser)
-  } */
-/*   constructor(props) {
-    super(props);
-    console.log(props.createUser.student)
-    this.state = {
-      name: props.createUser.name,
-      student: props.createUser.student,
-      occupation: props.createUser.occupation,
-      about: props.createUser.about
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }; */
+    console.log(props.onSubmit)
+  }
 
   state = {
     name: '',
@@ -40,7 +27,7 @@ class UserForm extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    console.log(this.state)
+    console.log(this.props.onSubmit(this.state))
   }
 
   render() {
