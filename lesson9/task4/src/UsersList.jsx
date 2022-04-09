@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Filter from "./Filter";
-import User from './User';
 
 class UsersList extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.users)
-  }
+  };
 
   state = {
     checkedUsers: this.props.users,
@@ -17,7 +15,7 @@ class UsersList extends Component {
     return (
       <div>
         <Filter filteredText={this.state.value} count={this.props.users.length} users={this.props.users}/>
-
+        <ul></ul>
       </div>
     );
   };

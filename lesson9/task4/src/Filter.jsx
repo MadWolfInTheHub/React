@@ -4,7 +4,6 @@ import User from './User';
 class Filter extends Component {
   constructor(props) {
     super(props)
-    console.log(this.props.users)
   }
 
   state = {
@@ -17,7 +16,6 @@ class Filter extends Component {
     this.setState({
       value: event.target.value
     });
-    console.log(this.state)
   };
   
 
@@ -34,7 +32,7 @@ class Filter extends Component {
       console.log(sortedUsers)
     } else {
       sortedUsers = this.state.checkedUsers;
-    }
+    };
     return(
       <div>
         <div className="filter">
@@ -47,8 +45,7 @@ class Filter extends Component {
           ))}
         </ul>
       </div>
-      
-    )
+    );
   };
 };
 
