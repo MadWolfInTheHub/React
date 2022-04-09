@@ -28,8 +28,6 @@ class Filter extends Component {
       sortedUsers = this.state.checkedUsers
       .slice()
       .filter(user => user.name.toLowerCase().split(``).includes(sorting.toLowerCase().split('').toString()));
-      console.log(sorting.split(''))
-      console.log(sortedUsers)
     } else {
       sortedUsers = this.state.checkedUsers;
     };
