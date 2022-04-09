@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
-  state ={
+  state = {
     value: 'good restaurant'
   };
 
