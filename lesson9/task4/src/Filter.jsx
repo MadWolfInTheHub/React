@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import User from './User';
-import UsersList from './UsersList';
 
 class Filter extends Component {
   constructor(props) {
@@ -10,6 +9,7 @@ class Filter extends Component {
 
   state = {
     checkedUsers: this.props.users,
+    count: this.count,
     value: '',
   };
 
@@ -17,14 +17,14 @@ class Filter extends Component {
     this.setState({
       value: event.target.value
     });
-    console.log(this.state.value)
+    console.log(this.state)
   };
   
 
 
   render() {
-    let sortedUsers;
     let sorting;
+    let sortedUsers;
     if(this.state.value.toLowerCase() !== this.state.value.toUpperCase()) {
       sorting = this.state.value;
       sortedUsers = this.state.checkedUsers
@@ -39,10 +39,15 @@ class Filter extends Component {
       <div>
         <div className="filter">
           <span className="filter__count">{sortedUsers.length}</span>
-          <input type="text" className="filter__input" onChange={this.handleChange} value={this.state.value} />
+          <input type="text" className="filter__input" onChange={this.handleChange} value={this.state.value}/>
         </div>
-        <UsersList users={sortedUsers}/>
+        <ul className="users">
+          {sortedUsers.map(user => (
+          <User key={user.id} name={user.name} age={user.age}/>
+          ))}
+        </ul>
       </div>
+      
     )
   };
 };

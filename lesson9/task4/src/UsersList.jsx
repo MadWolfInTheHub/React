@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Filter from "./Filter";
 import User from './User';
 
 class UsersList extends Component {
@@ -6,18 +7,21 @@ class UsersList extends Component {
     super(props);
     console.log(this.props.users)
   }
+
+  state = {
+    checkedUsers: this.props.users,
+    value: '',
+  };
   
   render() {  
-    let usersList = this.props.users
     return (
-      <ul className="users">{usersList.map(user => (
-        <User key={user.id} name={user.name} age={user.age}/>
-        ))}
-      </ul>
-    
+      <div>
+        <Filter filteredText={this.state.value} count={this.props.users.length} users={this.props.users}/>
+
+      </div>
     );
-  }
-}
+  };
+};
 
 
 export default UsersList;
