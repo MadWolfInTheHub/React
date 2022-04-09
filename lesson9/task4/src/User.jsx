@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-
 class User extends Component {
   constructor(props) {
     super(props)
@@ -10,8 +9,8 @@ class User extends Component {
   render() {
     return (
         <li className="user">
-          <span className="user__name">{this.name}</span>
-          <span className="user__age">{this.age}</span>
+          <span className="user__name">{this.props.name}</span>
+          <span className="user__age">{this.props.age}</span>
         </li>
     );
   };
