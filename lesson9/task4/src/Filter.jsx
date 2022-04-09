@@ -17,6 +17,7 @@ class Filter extends Component {
     this.setState({
       value: event.target.value
     });
+    console.log(this.state.value)
   };
   
 
@@ -24,23 +25,23 @@ class Filter extends Component {
   render() {
     let sortedUsers;
     let sorting;
-/*     if(this.props.count.value.toLowerCase() !== this.props.count.value.toUpperCase()) {
-      sorting = this.props.count.value;
-      sortedUsers = this.props.filterText
+    if(this.state.value.toLowerCase() !== this.state.value.toUpperCase()) {
+      sorting = this.state.value;
+      sortedUsers = this.state.checkedUsers
       .slice()
       .filter(user => user.name.toLowerCase().split(``).includes(sorting.toLowerCase().split('').toString()));
       console.log(sorting.split(''))
       console.log(sortedUsers)
     } else {
-      sortedUsers = this.props.filterText;
-    } */
+      sortedUsers = this.state.checkedUsers;
+    }
     return(
       <div>
         <div className="filter">
-          <span className="filter__count">{this.props.count}</span>
+          <span className="filter__count">{sortedUsers.length}</span>
           <input type="text" className="filter__input" onChange={this.handleChange} value={this.state.value} />
         </div>
-        <UsersList users={this.state.checkedUsers}/>
+        <UsersList users={sortedUsers}/>
       </div>
     )
   };
