@@ -28,7 +28,7 @@ class UsersList extends Component {
           <input type="text" className="filter__input" onChange={this.handleChange} value={this.state.value} />
         </div>
         <ul className="users">
-          <Filter usersList={this.props.users} count={this.state}/>
+          <Filter filterText={this.props.users} count={this.state}/>
         </ul>
       </div>
     

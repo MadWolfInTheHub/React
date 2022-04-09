@@ -14,13 +14,13 @@ class Filter extends Component {
     
     if(this.props.count.value.toLowerCase() !== this.props.count.value.toUpperCase()) {
       sorting = this.props.count.value;
-      sortedUsers = this.props.usersList
+      sortedUsers = this.props.filterText
       .slice()
       .filter(user => user.name.split(``).includes(sorting.split('').toString()));
       console.log(sorting.split('').toString())
       console.log(sortedUsers)
     } else {
-      sortedUsers = this.props.usersList;
+      sortedUsers = this.props.filterText;
       /* onsole.log(sorting.split('').toString()) */
 
     }
