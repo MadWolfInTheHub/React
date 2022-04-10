@@ -37,7 +37,6 @@ class Game extends React.Component {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
-    console.log(history, current, squares)
     if (this.calculateWinner(squares) || squares[i]) {
       return;
     }
@@ -79,6 +78,7 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
+      alert('Happy Birthday Asya!!!')
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
