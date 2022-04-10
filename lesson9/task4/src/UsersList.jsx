@@ -1,25 +1,23 @@
 import React, { Component } from "react";
-import Filter from "./Filter";
+import User from './User';
 
 class UsersList extends Component {
   constructor(props) {
     super(props);
-  };
-
-  state = {
-    checkedUsers: this.props.users,
-    value: '',
-  };
+    console.log(this.props)
+  }
   
   render() {  
+    let usersList = this.props.users.slice();
     return (
-      <div>
-        <Filter filteredText={this.state.value} count={this.props.users.length} users={this.props.users}/>
-        <ul></ul>
-      </div>
+      <ul className="users">{usersList.map(user => (
+        <User key={user.id} name={user.name} age={user.age}/>
+        ))}
+      </ul>
+    
     );
-  };
-};
+  }
+}
 
 
 export default UsersList;

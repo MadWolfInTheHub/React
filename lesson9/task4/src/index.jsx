@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UsersList from './UsersList'
+import Filter from "./Filter";
 import './index.scss'
 
 const rootElem = document.querySelector('#root')
+const filterText = '';
 
 const users = [
   {
@@ -28,4 +29,4 @@ const users = [
   },
 ];
 
-ReactDOM.render(<UsersList users={users}/>, rootElem);
+ReactDOM.render(<Filter users={users} count={users.length} filterText={filterText}/>, rootElem);

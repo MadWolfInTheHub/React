@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 
 class User extends Component {
   constructor(props) {
-    super(props);
-  };
+    super(props)
+    console.log(this.props)
+  }
 
   render() {
     return (
