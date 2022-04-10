@@ -38,7 +38,7 @@ class Filter extends Component {
     return(
       <div>
         <div className="filter">
-          <span className="filter__count">{this.props.count}</span>
+          <span className="filter__count">{sortedUsers.length}</span>
           <input type="text" className="filter__input" onChange={this.handleChange} value={this.state.value} />
         </div>
         <UsersList users={sortedUsers}/>
