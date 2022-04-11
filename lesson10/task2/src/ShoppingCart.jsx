@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CartTitle from "./CartTitle";
 import ProductList from "./ProductsList";
 
-class ShoppingChart extends Component {
+class ShoppingCart extends Component {
   state = {
     cartIteams: [
       {
@@ -29,4 +29,4 @@ class ShoppingChart extends Component {
   };
 };
 
-export default ShoppingChart;
+export default ShoppingCart;
