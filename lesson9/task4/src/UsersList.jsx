@@ -33,7 +33,7 @@ class UsersList extends Component {
       <div>
         <div className="filter">
           <Filter filterText={this.state.filter} 
-          count={this.props.users.length} 
+          count={sortedUsers.length} 
           onChange={this.handleChange}
           />
         </div>
