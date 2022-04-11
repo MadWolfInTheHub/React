@@ -4,7 +4,7 @@ import ProductsList from "./ProductsList";
 
 class ShoppingCart extends Component {
   state = {
-    cartIteams: [
+    cartItems: [
       {
         id: '1',
         name: 'Iphone 11',
@@ -19,11 +19,11 @@ class ShoppingCart extends Component {
   };
 
   render() {
-    const count = this.state.cartIteams.length;
+    const count = this.state.cartItems.length;
     return (
       <div className="column"> 
         <CartTitle userName={this.props.userData.firstName} count={count}/>
-        <ProductsList cartIteams={this.state.cartIteams}/>
+        <ProductsList cartItems={this.state.cartItems}/>
       </div>
     );
   };
