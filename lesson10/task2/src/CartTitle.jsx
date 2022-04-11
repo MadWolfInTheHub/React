@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-class CartTitle extends Component {
-  render() {
-    return (
-      <div className="cart-title">{`${this.props.userName}, you added ${this.props.count} items`}</div>
-    )
-  }
+const CartTitle = ({userName, count})=> {
+
+  return (
+    <div className="cart-title">{`${userName}, you added ${count} items`}</div>
+  )
+
 }
 
 export default CartTitle;
