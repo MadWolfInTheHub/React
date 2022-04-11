@@ -5,7 +5,6 @@ import User from './User';
 class UsersList extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
   }
 
   state = {
@@ -22,14 +21,11 @@ class UsersList extends Component {
   render() {
     let sortedUsers;
     let sorting;
-    console.log(this.state.value)
     if(this.state.filter.toLowerCase() !== this.state.filter.toUpperCase()) {
       sorting = this.state.filter;
       sortedUsers = this.state.usersList
       .slice()
       .filter(user => user.name.toLowerCase().split(``).includes(sorting.toLowerCase().split('').toString()));
-      console.log(sorting.split(''))
-      console.log(sortedUsers)
     } else {
       sortedUsers = this.state.usersList;
     }
