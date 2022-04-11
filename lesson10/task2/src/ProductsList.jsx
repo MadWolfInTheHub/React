@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class ProductList extends Component {
+class ProductsList extends Component {
 
   render() {
     const total = this.props.cartIteams.reduce(
@@ -22,4 +22,4 @@ class ProductList extends Component {
   };
 };
 
-export default ProductList;
+export default ProductsList;
