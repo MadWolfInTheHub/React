@@ -25,7 +25,7 @@ const Expand = ({ handleDialog, isOpen, children, title }) => {
   );
 };
 
-/* Expand.propTypes = {
+Expand.propTypes = {
   isOpen: propTypes.bool,
   children: propTypes.element,
   title: propTypes.string,
@@ -36,5 +36,5 @@ Expand.defaultProps = {
   isOpen: false,
   title: '',
 }
- */
+
 export default Expand;

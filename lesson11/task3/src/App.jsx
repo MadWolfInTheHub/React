@@ -10,7 +10,6 @@ class App extends Component {
     this.setState({
       isOpen: !this.state.isOpen,
     })
-    console.log(this.state)
   }
 
   render() {
