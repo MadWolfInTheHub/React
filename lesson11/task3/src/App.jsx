@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Expend from "./Expend";
+import Expand from "./Expand";
 
 class App extends Component {
   state = {
@@ -23,9 +23,9 @@ class App extends Component {
     )
     return (
       <div className="app">
-        <Expend isOpen={this.state.isOpen} handleDialog={this.handleDialog} title="Some title">
+        <Expand isOpen={this.state.isOpen} handleDialog={this.handleDialog} title="Some title">
           {elem}
-        </Expend>
+        </Expand>
       </div>
     );
   };

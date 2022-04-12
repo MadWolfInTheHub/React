@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from "prop-types";
 
 
-const Expend = ({ handleDialog, isOpen, children, title }) => {
+const Expand = ({ handleDialog, isOpen, children, title }) => {
   let dialog;
   let arrow;
   if (!isOpen) {
@@ -38,4 +38,4 @@ Expend.defaultProps = {
   title: '',
 }
 
-export default Expend;
+export default Expand;
