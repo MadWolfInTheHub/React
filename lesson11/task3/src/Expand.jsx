@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from "prop-types";
 
-
 const Expand = ({ handleDialog, isOpen, children, title }) => {
   let dialog;
   let arrow;
@@ -26,14 +25,14 @@ const Expand = ({ handleDialog, isOpen, children, title }) => {
   );
 };
 
-Expend.propTypes = {
+Expand.propTypes = {
   isOpen: propTypes.bool,
   children: propTypes.element,
   title: propTypes.string,
   handleDialog: propTypes.func.isRequired
 }
 
-Expend.defaultProps = {
+Expand.defaultProps = {
   isOpen: false,
   title: '',
 }
