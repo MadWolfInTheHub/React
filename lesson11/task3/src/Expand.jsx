@@ -2,13 +2,11 @@ import React from 'react';
 import propTypes from "prop-types";
 
 const Expand = ({ handleDialog, isOpen, children, title }) => {
-  let dialog;
   let arrow;
   if (!isOpen) {
-    dialog =  null;
+    children =  null;
     arrow = <i className="fas fa-chevron-down" ></i>
   } else {
-    dialog = children
     arrow = <i className="fas fa-chevron-up" ></i>
   }
 
@@ -21,7 +19,7 @@ const Expand = ({ handleDialog, isOpen, children, title }) => {
         </button>
       </div>
       <div className="expand__content">
-        {dialog}
+        {children}
       </div>
     </div>
   );
