@@ -20,7 +20,9 @@ const Expand = ({ handleDialog, isOpen, children, title }) => {
           {arrow}
         </button>
       </div>
-      {dialog}
+      <div className="expand__content">
+        {dialog}
+      </div>
     </div>
   );
 };
