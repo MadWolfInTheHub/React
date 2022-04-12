@@ -3,12 +3,13 @@ import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
 
 class FilterableProductTable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       filterText: '',
-      inStockOnly: false,
+      inStockOnly: false
     };
+    
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleInStockChange = this.handleInStockChange.bind(this);
   }
@@ -26,22 +27,24 @@ class FilterableProductTable extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
-        <SearchBar 
+        <SearchBar
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
           onFilterTextChange={this.handleFilterTextChange}
           onInStockChange={this.handleInStockChange}
         />
-        <ProductTable 
+        <ProductTable
           products={this.props.products}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
       </div>
     );
-  };
-};
+  }
+}
+
+
 
 export default FilterableProductTable;
