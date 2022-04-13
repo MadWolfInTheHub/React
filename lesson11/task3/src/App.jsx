@@ -2,16 +2,6 @@ import React, { Component } from "react";
 import Expand from "./Expand";
 
 class App extends Component {
-  state = {
-    isOpen: false,
-  }
-  
-  handleDialog = () => {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    })
-  }
-
   render() {
     const elem = (
       <p>
@@ -21,7 +11,7 @@ class App extends Component {
     )
     return (
       <div className="app">
-        <Expand isOpen={this.state.isOpen} handleDialog={this.handleDialog} title="Some title">
+        <Expand title="Some title">
           {elem}
         </Expand>
       </div>
