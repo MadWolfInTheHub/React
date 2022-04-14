@@ -22,8 +22,8 @@ export const fetchTasksList = () => {
       }
     })
     .then(tasksList => 
-      tasksList.map(({ id, _id, ...task }) => ({ 
-         id: _id, 
+      tasksList.map(({ id, ...task }) => ({ 
+         id,
          ...task
         })),
       );

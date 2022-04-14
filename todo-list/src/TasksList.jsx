@@ -24,7 +24,6 @@ class TasksList extends Component {
     const newTask = {
       text,
       done: false,
-      id: Math.random(),
     };
 
     createTask(newTask)
