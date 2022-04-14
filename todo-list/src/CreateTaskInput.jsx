@@ -28,7 +28,7 @@ class CreateTaskInput extends Component {
           onChange={this.handleChange}
           className='create-task__input'/>
         <button 
-          className='btn'
+          className='btn create-task__btn'
           onClick={this.handleTaskCreat}
           >Create</button>
       </div>
@@ -37,7 +37,7 @@ class CreateTaskInput extends Component {
 };
 
 CreateTaskInput.propTypes = {
-  onCreate: propTypes.func.isRequired,
+  onCreate: propTypes.func,
 }
 
 export default CreateTaskInput;

@@ -21,8 +21,7 @@ export default Task;
 Task.propTypes = {
   done: propTypes.bool,
   id: propTypes.string,
-  onChange: propTypes.func.isRequired,
-  onDelete: propTypes.func.isRequired,
+  onChange: propTypes.func,
+  onDelete: propTypes.func,
   text: propTypes.string
-
 }
