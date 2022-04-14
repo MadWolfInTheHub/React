@@ -22,7 +22,7 @@ export const fetchTasksList = () => {
       }
     })
     .then(tasksList => 
-      tasksList.map(({ _id, ...task }) => ({ 
+      tasksList.map(({ id, _id, ...task }) => ({ 
          id: _id, 
          ...task
         })),
