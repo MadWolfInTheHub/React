@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const  Product = ({ match }) => {
+const  Product = () => {
+  const { productId } = useParams();
   return (
-    <div className='page__content'>
-      {`Product is a ${match.params.productId}`}
+    <div className='product'>
+      {productId}
     </div>
   );
  
