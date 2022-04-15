@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class User extends Component {
+class s Component {
   state = {
     user: null,
   };
