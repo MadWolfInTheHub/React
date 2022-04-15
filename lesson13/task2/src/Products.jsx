@@ -9,10 +9,10 @@ const Products = ({ match }) => {
       <h1>Products</h1>
       <ul className='navigation'>
         <li className='navigation__item'>
-          <Link to={`${match.url}/ball`}>Ball</Link>
+          <Link to={`${match.url}/ball`}>Book</Link>
         </li>
         <li className='navigation__item'>
-          <Link to={`${match.url}/book`}>Book</Link>
+          <Link to={`${match.url}/book`}>Ball</Link>
         </li>
       </ul>
       <Switch>
