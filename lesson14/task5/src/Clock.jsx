@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
-import { useEffect } from 'react/cjs/react.production.min';
-
 
 const getTimeWithOffset = offset => {
   const currentTime = new Date();
@@ -15,12 +13,20 @@ const Clock = props => {
   const [counter, setCounter] = useState({
     time: formatDate(getTimeWithOffset(props.offset))
   });
-    
-  setInterval(() => {
-    setCounter({
-     time: formatDate(getTimeWithOffset(props.offset))
-    }); 
-  }, 1000)
+  
+  useEffect(() => {  
+    const interval = setInterval(() => {
+      setCounter({
+       time: formatDate(getTimeWithOffset(props.offset))
+      }); 
+    }, 1000)
+  
+    return () => {
+      clearInterval(interval)
+    }
+  })
+  
+
 
   return (
     <div className="clock">
